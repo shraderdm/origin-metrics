@@ -38,7 +38,7 @@ To check if this is an issue with the dns resolution. Open a browser tab to the 
 
 [NOTE]
 ====
-Just a reminder that the `metricsPublicURL` needs to be in the format `https://${HAWKULAR_METRICS_HOSTNAME}/hawkular/metrics`. It must specify that it is to use `https` and that the path ends with `/hawkular/metrics`
+Just a reminder that the `metricsPublicURL` needs to be in the format `https://${HAWKULAR_METRICS_HOSTNAME}/hawkular/metrics`. It must specify that it is to use `https` and that the path ends with `/hawkular/metrics`. If the metrics will be accessed by CloudForms via a router on a master, you must specify port 5000 in the `metricsPublicURL`, e.g. `https://master-00.example.com:5000/hawkular/metrics`.
 ====
 
 If you cannot access the Hawkular Metrics page from that URL then your router is not properly configured or the system the browser is running on is not configured to resolve the route's hostname.
